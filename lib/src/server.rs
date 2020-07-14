@@ -2,8 +2,8 @@ use tonic::transport::Server;
 
 use public_ip::{dns, http, ToResolver, BoxToResolver};
 
-use lib::hello_world::greeter_server::GreeterServer;
-use lib::MyGreeter;
+use node_lib::hello_world::greeter_server::GreeterServer;
+use node_lib::MyGreeter;
 
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error>> {

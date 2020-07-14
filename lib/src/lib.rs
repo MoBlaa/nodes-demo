@@ -3,6 +3,8 @@ use tonic::{Request, Response, Status};
 use hello_world::greeter_server::Greeter;
 use hello_world::{HelloReply, HelloRequest};
 
+pub mod api;
+
 pub mod hello_world {
     tonic::include_proto!("helloworld");
 }
@@ -22,3 +24,4 @@ impl Greeter for MyGreeter {
         Ok(Response::new(reply))
     }
 }
+

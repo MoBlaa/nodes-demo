@@ -1,5 +1,4 @@
-use lib::hello_world::greeter_client::GreeterClient;
-use lib::hello_world::HelloRequest;
+use node_lib::hello_world::{greeter_client::GreeterClient, HelloRequest};
 
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error>> {

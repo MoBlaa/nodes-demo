@@ -1,5 +1,5 @@
 [package]
-name = "lib"
+name = "node-lib"
 version = "0.1.0"
 authors = ["mhepp"]
 edition = "2018"
@@ -8,13 +8,13 @@ edition = "2018"
 
 [[bin]]
 name = "server"
-path = "bin/server/main.rs"
+path = "src/server.rs"
 test = false
 bench = false
 
 [[bin]]
 name = "client"
-path = "bin/client/main.rs"
+path = "src/client.rs"
 test = false
 bench = false
 
