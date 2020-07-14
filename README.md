@@ -1,4 +1,4 @@
-# Nodes Demo
+# [WIP] Nodes Demo
 
 Demo Platform for decentralized connection of devices.
 
