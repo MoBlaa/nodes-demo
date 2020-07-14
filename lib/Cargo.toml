@@ -1,0 +1,28 @@
+[package]
+name = "lib"
+version = "0.1.0"
+authors = ["mhepp"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[[bin]]
+name = "server"
+path = "bin/server/main.rs"
+test = false
+bench = false
+
+[[bin]]
+name = "client"
+path = "bin/client/main.rs"
+test = false
+bench = false
+
+[dependencies]
+qr2term = "0.2.1"
+tonic = "0.3.0"
+prost = "0.6.1"
+tokio = { version = "0.2", features = ["macros"] }
+
+[build-dependencies]
+tonic-build = "0.3.0"
