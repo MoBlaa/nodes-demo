@@ -18,6 +18,7 @@ Different roadmap lists to show whats the goal of this project.
 ### v0.1.0
 
 1. Implement Flutter mobile app which connects to the server by using the generated rust library.
+2. Different levels of communication. Print QR Code with local network address and global reachable address.
 
 ### v0.2.0
 
