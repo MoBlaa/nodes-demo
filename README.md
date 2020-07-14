@@ -10,3 +10,15 @@ Workflow:
 4. A new line "> Hello, cli!" is printed to the terminal
 5. Write "Hello, mobile!" into the terminal
 6. The message "Hello, mobile!" is shown in the app.
+
+## Roadmap
+
+Different roadmap lists to show whats the goal of this project.
+
+### v0.1.0
+
+1. Implement Flutter mobile app which connects to the server by using the generated rust library.
+
+### v0.2.0
+
+1. Connect devices through routing library (uses kademlia). This allows connection without knowing meeting in person.
