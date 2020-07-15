@@ -2,20 +2,21 @@ use std::os::raw::{c_char};
 
 use node_lib::hello_world::{greeter_client::GreeterClient, HelloRequest};
 
-use std::ffi::CStr;
+use std::ffi::{CStr, CString};
 use tokio::runtime::Runtime;
 
 static mut RUNTIME: Option<Runtime> = None;
 static mut CLIENT: Option<GreeterClient<tonic::transport::Channel>> = None;
 
 #[no_mangle]
-pub extern "C" fn hello(to: *const c_char) {
+pub extern "C" fn hello(to: *const c_char) -> *mut c_char {
     let c_str = unsafe { CStr::from_ptr(to) };
     let recipient = match c_str.to_str() {
         Err(_) => "there",
         Ok(recp) => recp,
     };
     println!("Hello, {}!", recipient);
+    CString::new("Hello ".to_owned() + recipient).unwrap().into_raw()
 }
 
 #[no_mangle]

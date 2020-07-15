@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'node_test.dart';
 
 void main() {
   runApp(MyApp());
@@ -51,8 +52,10 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
+  String _message = "...";
 
   void _incrementCounter() {
+    var message = hello("$_counter");
     setState(() {
       // This call to setState tells the Flutter framework that something has
       // changed in this State, which causes it to rerun the build method below
@@ -60,6 +63,7 @@ class _MyHomePageState extends State<MyHomePage> {
       // _counter without calling setState(), then the build method would not be
       // called again, and so nothing would appear to happen.
       _counter++;
+      _message = message;
     });
   }
 
@@ -104,6 +108,13 @@ class _MyHomePageState extends State<MyHomePage> {
               '$_counter',
               style: Theme.of(context).textTheme.headline4,
             ),
+            Text(
+              'Message:'
+            ),
+            Text(
+              '$_message',
+              style: Theme.of(context).textTheme.headline4,
+            )
           ],
         ),
       ),
