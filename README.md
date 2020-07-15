@@ -13,6 +13,10 @@ Workflow:
 7. The line"&lt;Hello, mobile!" is printed to the terminal
 8. The message "Hello, mobile!" is shown in the app.
 
+## TODOs
+
+- Fix error: 'dlopen failed: library "libandroid_lib.so" not found'
+
 ## Roadmap
 
 Different roadmap lists to show whats the goal of this project.
